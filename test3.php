@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<head>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 
@@ -9,127 +7,29 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <style>
-  /* Make the image fully responsive */
-  .carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
-  .carousel{
-	  width: 100%;
-	  height: 80%;
-	  margin: auto;
-  }
-   /* Make the image fully responsive */
-  .carousel-inner img {
-      width: 100%;
-      height: 100%;
-  }
-  .carousel{
-	  width: 100%;
-	  height: 80%;
-	  margin: auto;
-  }
-  #login-dp{
-    min-width: 250px;
-    padding: 14px 14px 0;
-    overflow:hidden;
-    background-color:rgba(255,255,255,.8);
-} 
-#login-dp .help-block{
-    font-size:12px    
-}
-#login-dp .bottom{
-    background-color:rgba(255,255,255,.8);
-    border-top:1px solid #ddd;
-    clear:both;
-    padding:14px;
-}
-#login-dp .social-buttons{
-    margin:12px 0    
-}
-#login-dp .social-buttons a{
-    width: 49%;
-}
-#login-dp .form-group {
-    margin-bottom: 10px;
-}#login-dp{
-	background-color: white;
-	color: #fff;
-}
-#login-dp .bottom{
-	background-color: white;
-	border-top:0 none;
-}
-  </style>
-  </head>
-  
-  <title> FlashCulture </title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-<?php
-	include 'navbar.php';
-	?>
- 
-<body>
-
-<div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
-
- <div class="carousel-item active">
+<!DOCTYPE html>
 <div class="jumbotron text-center">
-<h1><b>Flash</b>Culture</h1>
-<br></br>
-<img src = "https://globalstudies.umbc.edu/files/2014/11/Main-CGS.png" style="width:200px;height:200px;">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="test.php">Home</a>
+  <ul class="navbar-nav">
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Kesenian
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Kesenian Tari</a>
+        <a class="dropdown-item" href="#">Kesenian Musik</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+  <h1>Kebudayaan Jawa Barat</h1>
+	<img src = "https://www.tripjalanjalan.com/wp-content/uploads/2017/05/gedung-sate.jpg" style="width:800px;height:400px;">
+</div>
 
-<br></br>
-
-<h3><i>"..we help you not to forget culture"</i></h3>
-
- </div>  <div class="container">
- <div class="col-lg-12"><center>
- 
-			  Copyright &copy; Recruitment EAD 2017
-        </center> </div>
- </div></div>
- <div class="carousel-item">
-<div class="jumbotron text-center">
-<h2>Introduction about Culture</h2>
- <iframe width="900" height="450" src="https://www.youtube.com/embed/fL5WzpuvXfY?autoplay=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
- </div>
-<div class="container">
-<h1>Apa itu Budaya?</h1>
-<center>
-<img src = "http://www.welcomeurope.com/images/factoftheday/eb5a7cf40c0705f0b12bcf07ba14cc127c6e6b92.jpg" style="width:200px;height:150px;">
-</center>
-<p style="text-align:justify;">
-<h1></h1>
-Budaya adalah suatu cara hidup yang berkembang, dan dimiliki bersama oleh sebuah kelompok orang, dan diwariskan dari generasi ke generasi. Budaya terbentuk dari banyak unsur yang rumit, termasuk sistem agama dan politik, adat istiadat, bahasa, perkakas, pakaian, bangunan, dan karya seni. Bahasa, sebagaimana juga budaya, merupakan bagian tak terpisahkan dari diri manusia sehingga banyak orang cenderung menganggapnya diwariskan secara genetis. Ketika seseorang berusaha berkomunikasi dengan orang-orang yang berbeda budaya, dan menyesuaikan perbedaan-perbedaannya, membuktikan bahwa budaya itu dipelajari.
-Budaya adalah suatu pola hidup menyeluruh. Budaya bersifat kompleks, abstrak, dan luas. Banyak aspek budaya turut menentukan perilaku komunikatif. Unsur-unsur sosio-budaya ini tersebar, dan meliputi banyak kegiatan sosial manusia.
-</p>
-
-<h3>Pentingnya Kebudayaan..</h3>
-<center>
-<img src = "https://globalstudies.umbc.edu/files/2014/11/Main-CGS.png" style="width:200px;height:200px;">
-</center>
-<p style="text-align:justify;">
-<h1></h1>
-Beberapa alasan mengapa orang mengalami kesulitan ketika berkomunikasi dengan orang dari budaya lain terlihat dalam definisi budaya: Budaya adalah suatu perangkat rumit nilai-nilai yang dipolarisasikan oleh suatu citra yang mengandung pandangan atas keistimewaannya sendiri."Citra yang memaksa" itu mengambil bentuk-bentuk berbeda dalam berbagai budaya seperti "individualisme kasar" di Amerika, "keselarasan individu dengan alam" di Jepang dan "kepatuhan kolektif" di Tiongkok.
-Citra budaya yang bersifat memaksa tersebut membekali anggota-anggotanya dengan pedoman mengenai perilaku yang layak dan menetapkan dunia makna dan nilai logis yang dapat dipinjam anggota-anggotanya yang paling bersahaja untuk memperoleh rasa bermartabat dan pertalian dengan hidup mereka.
-Dengan demikian, budayalah yang menyediakan suatu kerangka yang koheren untuk mengorganisasikan aktivitas seseorang dan memungkinkannya meramalkan perilaku orang lain.
-</p>
-<div class="col-lg-12"><center>
-			  Copyright &copy; Recruitment EAD 2017
-          <h1></h1> </center> </div>
-		   </div>
- </div>
-
-
-
-<div class="carousel-item">
-<div class="jumbotron text-center">
-<h1>Kebudayaan Jawa Barat</h1>
-	<img src = "https://www.tripjalanjalan.com/wp-content/uploads/2017/05/gedung-sate.jpg" style="width:900px;height:450px;">
-	</div>
 <div class="container">
   <h1>Kota Bandung</h1>
   <p style="text-align:justify;">KATA “Bandung” berasal dari kata bendung atau bendungan karena terbendungnya sungai Citarum oleh lava Gunung Tangkuban Perahu yang kemudian membentuk telaga. Menurut mitos, nama “Bandung” diambil dari sebuah kendaraan air yang terdiri dari dua perahu yang diikat berdampingan yang disebut perahu bandung yang digunakan oleh Bupati Bandung, R.A. Wiranatakusumah II, untuk melayari Ci Tarum (Sunda: Ci = Cai = Air = Sungai) dalam mencari tempat kedudukan kabupaten yang baru untuk menggantikan ibukota yang lama di Dayeuhkolot.Kota Bandung merupakan kota metropolitan terbesar di wilayah Jawa Barat yang menjadi ibu kota Provinsi Jawa Barat. Kota Bandung juga merupakan kota terbesar ketiga di Indonesia setelah Jakarta dan Surabaya. </p> 
@@ -147,19 +47,7 @@ Dengan demikian, budayalah yang menyediakan suatu kerangka yang koheren untuk me
   </div>
 </div>
 <p style="text-align:justify;">Kota Bandung secara resmi mendapat status gemeente (kota) dari Gubernur Jenderal J.B. van Heutsz pada tanggal 1 April 1906 dengan luas wilayah waktu itu sekitar 900 ha, dan bertambah menjadi 8.000 ha di tahun 1949, sampai terakhir bertambah menjadi luas wilayah saat ini. Pada masa perang kemerdekaan, pada 24 Maret 1946, sebagian kota ini di bakar oleh para pejuang kemerdekaan sebagai bagian dalam strategi perang waktu itu. Peristiwa ini dikenal dengan sebutan Bandung Lautan Api dan diabadikan dalam lagu Halo-Halo Bandung. Selain itu kota ini kemudian ditinggalkan oleh sebagian penduduknya yang mengungsi ke daerah lain. Sebutan Bandung Lautan Api kini digunakan sebagai nama stadion bertaraf internasional di kawasan Gedebage, wilayah timur kota Bandung: Stadion Gelanggang Olahraga Bandung Lautan Api (GBLA).<br> <h6>Sumber : http://www.bandungaktual.com/2015/03/sejarah-kota-bandung-asal-usul-nama.html</h6> </br> </p>
-<div class="col-lg-12"><center>
-			  Copyright &copy; Recruitment EAD 2017
-			  <h1></h1>
-           </center> 
-		   </div>
 </div>
 
-	</div>
-	<a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-<a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-	</div>
 </body>
+</html>

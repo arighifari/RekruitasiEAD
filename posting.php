@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   </head>
-  
+<title> FlashCulture - Posting</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    
   <?php
 	include_once('konek.php');
 	include_once('navbar.php');
@@ -44,21 +46,25 @@
 		
 	}
 ?>
-<title> Posting </title>
-  <body>
-<div class="container">
-	<h2>Tulis Artikel</h2>	
-	</br>
+<body>
+
+<div class="jumbotron">
+<center>	<h1>Tulis Artikel</h1>	
+	
+	<img src = "https://fifocapital.co.uk/wp-content/uploads/2017/04/Icon_WriteArticles.png" style="width:200px;height:200px;">
+<br></br>
   <form method="POST" enctype="multipart/form-data">
-	<div> 
-		<h4>Pilih Kategori</h4>
+	<div>
+		<h3>Pilih Kategori</h3>
+		
 		<label class="radio-inline">
-			<input type="radio" name="pilih1">Kesenian Musik
+			<input type="radio" name="pilih1"> Kesenian Musik
 		</label>
 		<label class="radio-inline">
-			<input type="radio" name="pilih2">Kesenian Tari
+			<input type="radio" name="pilih2"> Kesenian Tari
 		</label>
 	</div>
+	</center>
     <div class="form-group">
 		<label for="user">Username:</label>
 		<input class="form-control" id="user" placeholder="Masukkan Username" name="user">
@@ -73,11 +79,15 @@
 	</br>
 	<div class="form-group">
 		<label for="text">Isi Artikel:</label>
-		<textarea wrap="hard" class="form-control" cols="5" rows="10" id="text" name="tulis" ></textarea>
+		<textarea class="form-control" rows="10" id="text" name="tulis" ></textarea>
     </div>
 		<button type="submit" class="btn btn-primary" name="masuk">Submit</button>
+  
+<center>Copyright &copy; Recruitment EAD 2017
+
+          </center>
   </form>
 </div>
-
+		   
 </body>
 </html>

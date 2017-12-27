@@ -9,6 +9,36 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+<?php
+	session_start();
+if (isset($_POST['submit'])) {	
+	if(!empty($_POST['user']) && !empty($_POST['password'])) {
+		$user=$_POST['user'];
+		$password=$_POST['password'];
+		
+		$conn = mysqli_connect('localhost','root','','kebudayaan') or die(mysqli_error($conn));
+		$selectdb = mysqli_select_db($conn,'kebudayaan') or die("Tidak Bisa Terhubung ke Database");
+		
+		$loginquery = mysqli_query($conn,"SELECT * FROM login WHERE user='".$user."' AND pass='".$password."'");
+		$numrow = mysqli_num_rows($loginquery);
+		
+		if($numrow!=0) {
+			while($row=mysqli_fetch_assoc($loginquery)) {
+				$dbuser = $row['user'];
+				$dbpass = $row['pass'];
+			}
+			if($user==$dbuser && $password==$dbpass) {
+				$_SESSION['sess_user']=$user;
+				header("Location: http://localhost/EAD/test.php");
+			}
+		} else {			
+				echo"<script>alert('Username dan Password Salah');</script>";
+		}
+	} else {	
+	}
+}
+?>
   <style>
   /* Make the image fully responsive */
   .carousel-inner img {
@@ -63,16 +93,71 @@
 }
   </style>
   </head>
-  
   <title> FlashCulture </title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-<?php
-	include 'navbar.php';
-	?>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="test.php">Home</a>
+  <ul class="navbar-nav">
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Kesenian
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Kesenian Tari</a>
+        <a class="dropdown-item" href="#">Kesenian Musik</a>
+      </div>
+    </li>
+  </ul>
+  <?php 
+  if (!isset($_SESSION['sess_user'])) { ?>
+		 <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+			<ul id="login-dp" class="dropdown-menu">
+				<li>
+					 <div class="row">
+							<div class="col-md-12">
+								 <form class="form" role="form" method="post" accept-charset="UTF-8" id="login-nav">
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputUser">Username</label>
+											 <input type="user" class="form-control" id="exampleInputUser" placeholder="Username" name="user" required>
+										</div>
+										<div class="form-group">
+											 <label class="sr-only" for="exampleInputPassword">Password</label>
+											 <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password" name="password" required>
+										</div>
+										<div class="form-group">
+											 <button type="submit" class="btn btn-primary btn-block" name = "submit" >Sign in </button>
+										</div>
+								 </form>
+							</div>
+							<div class="bottom text-center">
+								<a href="register.php"><b>Daftar</b></a>
+							</div>
+					 </div>			
+					</li>
+					</ul>
+					</li> 
+		<?php }
+		else if (isset($_SESSION['sess_user'])) { ?>
+			<ul class="navbar-nav">
+			
+			<li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Menu
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="posting.php">Posting</a>
+        <a class="dropdown-item" href="#">Update Posting</a>
+        <a class="dropdown-item" href="#">Delete Posting</a>
+		<a class="dropdown-item" href="logout.php">LOGOUT</a> 
+      </div>
+    </li><div class="navbar-text"> SELAMAT DATANG, <?=$_SESSION['sess_user'];?> </div>
+			</ul> 
+		<?php } ?>
+</nav>
  
-<body>
-
 <div id="demo" class="carousel slide" data-ride="carousel" data-interval="false">
 
  <div class="carousel-item active">
@@ -94,7 +179,7 @@
  <div class="carousel-item">
 <div class="jumbotron text-center">
 <h2>Introduction about Culture</h2>
- <iframe width="900" height="450" src="https://www.youtube.com/embed/fL5WzpuvXfY?autoplay=1" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+ <iframe width="900" height="450" src="https://www.youtube.com/embed/fL5WzpuvXfY?autoplay=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
  </div>
 <div class="container">
 <h1>Apa itu Budaya?</h1>
@@ -162,4 +247,4 @@ Dengan demikian, budayalah yang menyediakan suatu kerangka yang koheren untuk me
     <span class="carousel-control-next-icon"></span>
   </a>
 	</div>
-</body>
+	

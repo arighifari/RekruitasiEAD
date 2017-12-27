@@ -1,4 +1,14 @@
-<style>
+<head>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ <style>
 form {
     border: 3px solid #f1f1f1;
 }
@@ -63,9 +73,13 @@ span.psw {
     }
 }
 </style>
+  </head>
+  
+  <title> FlashCulture - Register</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <?php
-	session_start();
+	include_once'navbar.php';
 	include_once('konek.php');
 	
 	if(isset($_POST['masuk'])){
@@ -77,21 +91,25 @@ span.psw {
 	$input = mysqli_query($dbcon, "INSERT INTO login (nama,user,pass) VALUES('$nama','$user','$pass')");
 	if($input) {
 		echo "<script>alert('Berhasil Membuat Akun');</script>";
-		header("Location: http://localhost/EAD/home.php");
+		
 			}
 		else {
 		echo"<script>alert('Username Sudah Ada');</script>";	
 			}
 	}
 ?>
-<title> Daftar Admin Baru </title>
+
 <body>
 
-<h2>Register Form</h2>
+  <div class="jumbotron">
+  <form method="POST">
 
-<form method="POST">
+  <center><br></br><h2>Register Form</h2>
+
+ </center>
   <div class="imgcontainer">
-    <img src="https://cdn3.iconfinder.com/data/icons/dev-people/512/user_login-512.png" alt="Avatar" class="avatar">
+  	<img src = "https://cdn3.iconfinder.com/data/icons/dev-people/512/user_login-512.png" style="width:200px;height:200px;">
+
   </div>
 
   <div class="container">
@@ -104,13 +122,15 @@ span.psw {
 
     <label><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="pass" required>
-        
+    <br> </br>   
     <button type="submit" name="masuk" >Submit</button>
-  </div>
+<br></br>
+<center>Copyright &copy; Recruitment EAD 2017
 
-  <div class="container" style="background-color:#f1f1f1">
-    <a <button href="home.php" type="button" class="cancelbtn">Cancel</button> </a>
-  </div>
-</form>
+          </center>
+ </div></form>
+</div>
+
+
 
 </body>
