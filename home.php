@@ -2,11 +2,9 @@
 <head>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <style>
@@ -62,10 +60,11 @@
 	border-top:0 none;
 }
   </style>
-  </head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>FlashCulture</title>
+<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"></script>
+</head>
   
-  <title> FlashCulture </title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
 <?php
 	include 'navbar.php';
@@ -87,10 +86,9 @@
 
  </div>  <div class="container">
  <div class="col-lg-12"><center>
- 
 			  Copyright &copy; Recruitment EAD 2017
-        </center> </div>
- </div></div>
+			  </br>           </center> 
+		   </div> </div></div>
  <div class="carousel-item">
 <div class="jumbotron text-center">
 <h2>Introduction about Culture</h2>
@@ -119,8 +117,8 @@ Dengan demikian, budayalah yang menyediakan suatu kerangka yang koheren untuk me
 </p>
 <div class="col-lg-12"><center>
 			  Copyright &copy; Recruitment EAD 2017
-          <h1></h1> </center> </div>
-		   </div>
+			  </br>           </center> 
+		   </div>		   </div>
  </div>
 
 
@@ -149,8 +147,7 @@ Dengan demikian, budayalah yang menyediakan suatu kerangka yang koheren untuk me
 <p style="text-align:justify;">Kota Bandung secara resmi mendapat status gemeente (kota) dari Gubernur Jenderal J.B. van Heutsz pada tanggal 1 April 1906 dengan luas wilayah waktu itu sekitar 900 ha, dan bertambah menjadi 8.000 ha di tahun 1949, sampai terakhir bertambah menjadi luas wilayah saat ini. Pada masa perang kemerdekaan, pada 24 Maret 1946, sebagian kota ini di bakar oleh para pejuang kemerdekaan sebagai bagian dalam strategi perang waktu itu. Peristiwa ini dikenal dengan sebutan Bandung Lautan Api dan diabadikan dalam lagu Halo-Halo Bandung. Selain itu kota ini kemudian ditinggalkan oleh sebagian penduduknya yang mengungsi ke daerah lain. Sebutan Bandung Lautan Api kini digunakan sebagai nama stadion bertaraf internasional di kawasan Gedebage, wilayah timur kota Bandung: Stadion Gelanggang Olahraga Bandung Lautan Api (GBLA).<br> <h6>Sumber : http://www.bandungaktual.com/2015/03/sejarah-kota-bandung-asal-usul-nama.html</h6> </br> </p>
 <div class="col-lg-12"><center>
 			  Copyright &copy; Recruitment EAD 2017
-			  <h1></h1>
-           </center> 
+			  </br>           </center> 
 		   </div>
 </div>
 
