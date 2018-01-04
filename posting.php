@@ -23,37 +23,36 @@ fress=setTimeout("move()",speed);}move();
 	include_once('navbar.php');
 	
 	if(isset($_POST['masuk'])){
-		if(isset($_POST['pilih1'])){	
+		if(isset($_POST['pilih'])){
+			if($_POST['pilih']=='kesenianmusik' ){
 	$user = $_POST['user'];
 	$judul = $_POST['judul'];
 	$tulis = $_POST['tulis'];
 	$fileName = $_FILES['gambar']['name'];	
 	
 	$input = mysqli_query($dbcon, "INSERT INTO kesenianmusik (user,judul,gambar,isi) VALUES('$user','$judul','$fileName','$tulis')");
-	if($input) {
-		echo "<script>alert('Berhasil Membuat Postingan'); window.location = 'posting.php';</script>";
-		move_uploaded_file($_FILES['gambar']['tmp_name'], "gambar/".$_FILES['gambar']['name']);
+		if($input) {
+			echo "<script>alert('Berhasil Membuat Postingan'); window.location = 'posting.php';</script>";
+			move_uploaded_file($_FILES['gambar']['tmp_name'], "gambar/".$_FILES['gambar']['name']);
+				}
+			else {
+				}
 			}
-		else {
-			}
-		}
-		else if(isset($_POST['pilih2'])){	
+		else if(($_POST['pilih'])=='keseniantari'){	
 	$user = $_POST['user'];
 	$judul = $_POST['judul'];
-	$tulis = mysqli_real_escape_string($dbcon,nl2br($_POST['tulis']));
+	$tulis = $_POST['tulis'];
 	$fileName = $_FILES['gambar']['name'];	
 	
 	$input = mysqli_query($dbcon, "INSERT INTO keseniantari (user,judul,gambar,isi) VALUES('$user','$judul','$fileName','$tulis')");
-	if($input) {
-		echo "<script>alert('Berhasil Membuat Posting'); window.location = 'posting.php';</script>";
-		move_uploaded_file($_FILES['gambar']['tmp_name'], "gambar2/".$_FILES['gambar']['name']);
-			}
-		else {
-			echo "<script>alert('Gagal Membuat Posting'); window.location = 'posting.php';</script>";
-
+		if($input) {
+			echo "<script>alert('Berhasil Membuat Postingan'); window.location = 'posting.php';</script>";
+			move_uploaded_file($_FILES['gambar']['tmp_name'], "gambar2/".$_FILES['gambar']['name']);
+				}
+			else {
+				}
 			}
 		}
-		
 	}
 ?>
 <body>
@@ -68,8 +67,8 @@ fress=setTimeout("move()",speed);}move();
 		<h3>Pilih Kategori</h3>
 		
 		<label class="radio-inline">
-			<input type="radio" name="pilih1"> Kesenian Musik 		
-		<input type="radio" name="pilih2"> Kesenian Tari
+			<input type="radio" name="pilih" value="kesenianmusik"> Kesenian Musik </input>
+			<input type="radio" name="pilih" value="keseniantari"> Kesenian Tari </input>
 		</label>
 	
 	</center></div>

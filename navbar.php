@@ -78,7 +78,9 @@ if (isset($_POST['submit'])) {
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <!-- Brand -->
   <a class="navbar-brand" href="home.php">Home</a>
-  <ul class="navbar-nav">
+ <ul class="navbar-nav"> 
+ <a class="nav-link" href="sejarah.php">Sejarah Kota Bandung</a>
+ 
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -89,11 +91,12 @@ if (isset($_POST['submit'])) {
         <a class="dropdown-item" href="kesenianmusic.php">Kesenian Musik</a>
       </div>
     </li>
-  </ul>
+  
   <?php 
   if (!isset($_SESSION['sess_user'])) { ?>
-		 <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+		 <li class="nav-item dropdown">
+		 
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
 			<ul id="login-dp" class="dropdown-menu">
 				<li>
 					 <div class="row">
@@ -121,9 +124,7 @@ if (isset($_POST['submit'])) {
 					</li> 
 		<?php }
 		else if (isset($_SESSION['sess_user'])) { ?>
-			<ul class="navbar-nav">
-			<div class="navbar-text"> SELAMAT DATANG, <?=$_SESSION['sess_user'];?> </div>
-			<li class="nav-item dropdown">
+		<li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
         Menu
       </a>
@@ -133,6 +134,7 @@ if (isset($_POST['submit'])) {
 		<a class="dropdown-item" href="logout.php">LOGOUT</a> 
       </div>
     </li>
-			</ul> 
-		<?php } ?>
-</nav>
+			<div class="navbar-text"> SELAMAT DATANG, <?=$_SESSION['sess_user'];?> </div>
+			<?php } ?>
+</ul>	
+	</nav>

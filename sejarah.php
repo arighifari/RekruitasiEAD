@@ -8,8 +8,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<script language='JavaScript'>
+var txt=" FlashCulture - Sejarah Kota Bandung ";
 
-<title> Sejarah </title>
+var speed=600;var fress=null;function move() { document.title=txt;
+txt=txt.substring(1,txt.length)+txt.charAt(0);
+fress=setTimeout("move()",speed);}move();
+</script>
+<script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"></script>
+
 </head>
 
 <body>
@@ -18,11 +26,11 @@
 	include 'navbar.php';?>
 	
 <div class="jumbotron text-center">
-  <h1>Kebudayaan Jawa Barat</h1>
+  <h2>Sejarah Kota Bandung</h2>
 	<img src = "https://www.tripjalanjalan.com/wp-content/uploads/2017/05/gedung-sate.jpg" style="width:800px;height:400px;">
 </div>
 
-<div class="container text-center">
+<div class="container">
   <p style="text-center;" > <h1>Kota Bandung</h1> </p>
   </div>
 	<div class="container">
