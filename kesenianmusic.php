@@ -17,10 +17,11 @@ fress=setTimeout("move()",speed);}move();
 
 
   
-<div class="container text-center">
-  <p style="text-center;" > <h1>KESENIAN MUSIK</h1> </p>
-  </div>
-</br>
+<div class="jumbotron text-center">
+
+	<img src = "http://goadventurelombok.com/wp-content/uploads/2016/09/NTB_Gendang-Beleq_zps7d14be2b.png" style="width:300px;height:200px;">
+	 </br></br><h3>Kesenian <b>Musik</b></h3></div>
+
 <body>
 	<?php while ($data=mysqli_fetch_array($tampil)) { ?>
 <form method="POST" action="">
@@ -33,8 +34,9 @@ fress=setTimeout("move()",speed);}move();
   <div class="container">
 	<p style="text-align:justify;" width="100%"> <?php echo $data['isi'] ?> </p>
   </div>
-  </br>
-  </br>
+  <center>
+	<img src = "line.png" style="height:100px;width:700px">
+</center>
   </form>
 <?php } ?>
 </body>

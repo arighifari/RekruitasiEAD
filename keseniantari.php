@@ -14,11 +14,12 @@ fress=setTimeout("move()",speed);}move();
 
 ?>
 
-<title> Kesenian Tari </title>
-<div class="container text-center">
-  <p style="text-center;" > <h1>KESENIAN TARI</h1> </p>
-  </div>
-</br>
+<div class="jumbotron text-center">
+
+	<img src = "http://jogjabelajar.jogjaprov.go.id/jbbudaya/upload/media/Tari%20Tradisional.png.png" style="width:200px;height:200px;">
+	 </br>
+	 </br><h3>Kesenian <b>Tari</b></h3></div>
+
 
 <?php while ($data=mysqli_fetch_array($tampil)) { ?>
 <form method="POST" action="">
@@ -31,7 +32,8 @@ fress=setTimeout("move()",speed);}move();
   <div class="container">
 	<p style="text-align:justify;" width="100%"> <?php echo $data['isi'] ?> </p>
   </div>
-  </br>
-  </br>
+  <center>
+	<img src = "line.png" style="height:100px;width:700px">
+</center>
   </form>
 <?php } ?>
